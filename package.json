@@ -8,8 +8,12 @@
     "random"
   ],
   "icon": "images/logo.png",
-  "version": "0.9.0",
-  "publisher": "vs-code-extension-publish",
+  "version": "0.9.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jammerware/code-guid"
+  },
+  "publisher": "jammerware",
   "engines": {
     "vscode": "^1.5.0"
   },

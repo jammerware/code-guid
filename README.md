@@ -6,8 +6,12 @@ Welcome to CodeGuid! It's a simple extension to VS Code that allows access to a 
 
 ## Features
 
-- Easy creation/copying of GUIDs via the Command Palette: ![See it in action!](images/demo.gif)
-- A customizable keybinding for same (bound by default to ALT+G, ALT+G or CMD+G CMD+G on Mac)
+- Easy creation/copying of GUIDs via the Command Palette: 
+
+![See it in action!](images/demo.gif)
+
+
+- A customizable keybinding for same (bound by default to SHIFT+ALT+G, G or CMD+^+G G on Mac)
 - The option to turn off the probably-annoying notification that happens when the guid is generated using the config flag `codeGuid.showNotificationWhenGuidGenerated`
 
 ## Known Issues
@@ -20,6 +24,6 @@ Snippet-like insertion of generated GUIDs. I'm not positive this is possible in 
 
 ## Release Notes
 
-### 1.0.0
+### 0.9.2
 
 CodeGuid is born!

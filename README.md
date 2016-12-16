@@ -6,23 +6,23 @@ Welcome to CodeGuid! It's a simple extension to VS Code that allows access to a 
 
 ## Features
 
-- Easy creation/copying of GUIDs via the Command Palette: 
+- Easy generation/copying of GUIDs via the Command Palette: 
 
 ![See it in action!](images/demo.gif)
 
 
-- A customizable keybinding for same (bound by default to SHIFT+ALT+G, G or CMD+^+G G on Mac)
+- Customizable keybindings for same (the "insert" command is bound by default to CTRL+SHIFT+G, CTRL+SHIFT+G or CMD+^+G CMD+^+G,CMD+^+G on Mac)
 - The option to turn off the probably-annoying notification that happens when the guid is generated using the config flag `codeGuid.showNotificationWhenGuidGenerated`
 
 ## Known Issues
 
 I'm using [copy-paste](https://github.com/xavi-/node-copy-paste) to deliver clipboard access. It doesn't seem to have an error callback if something goes wrong. Maybe it never will? I have absolute faith in [xavi](https://github.com/xavi-), whoever that blessed soul is.
 
-## Coming soon (I hope)
-
-Snippet-like insertion of generated GUIDs. I'm not positive this is possible in the current Code API, as I think snippets have to be language-specific. Give me a break, I just started this today.
-
 ## Release Notes
+
+### 1.0.1
+
+Added a new command that inserts a generated GUID at the cursor location in the active text editor and rebound the default keybinding to it (since this command is basically Lorelai, and the old one is more or less Kirk).
 
 ### 0.9.2
 

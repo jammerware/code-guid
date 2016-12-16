@@ -8,7 +8,7 @@
     "random"
   ],
   "icon": "images/logo.png",
-  "version": "0.9.2",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/jammerware/code-guid"
@@ -21,14 +21,19 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:codeGuid.generateGuid"
+    "onCommand:codeGuid.generateGuidToClipboard",
+    "onCommand:codeGuid.insertGuidAtCursor"
   ],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
-        "command": "codeGuid.generateGuid",
-        "title": "CodeGuid: Generate GUID"
+        "command": "codeGuid.generateGuidToClipboard",
+        "title": "CodeGuid: Copy GUID to clipboard"
+      },
+      {
+        "command": "codeGuid.insertGuidAtCursor",
+        "title": "CodeGuid: Insert GUID at cursor"
       }
     ],
     "configuration": {
@@ -38,15 +43,14 @@
         "codeGuid.showNotificationWhenGuidGenerated": {
           "type": "boolean",
           "default": true,
-          "description": "Show a notification when a GUID is generated and copied to your clipboard."
+          "description": "Show a notification when a GUID is copied to your clipboard."
         }
       }
     },
     "keybindings": [{
-        "command": "codeGuid.generateGuid",
-        "key": "alt+shift+g g",
-        "mac": "cmd+^+g g",
-        "when": "editorTextFocus"
+        "command": "codeGuid.insertGuidAtCursor",
+        "key": "ctrl+shift+g ctrl+shift+g",
+        "mac": "cmd+^+g cmd+^+g"
     }]
   },
   "scripts": {

@@ -20,6 +20,10 @@ I'm using [copy-paste](https://github.com/xavi-/node-copy-paste) to deliver clip
 
 ## Release Notes
 
+### 1.2.1
+
+Updated README.
+
 ### 1.2.0
 
 Change the default keybinding for "Insert GUID at Cursor" to `ctrl`+`;` because the original keybinding (`ctrl`+`g`, `ctrl`+`g`) conflicts with the keybinding for "Show SCM".

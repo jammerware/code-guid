@@ -20,6 +20,10 @@ I'm using [copy-paste](https://github.com/xavi-/node-copy-paste) to deliver clip
 
 ## Release Notes
 
+### 1.2.0
+
+Change the default keybinding for "Insert GUID at Cursor" to `ctrl`+`;` because the original keybinding (`ctrl`+`g`, `ctrl`+`g`) conflicts with the keybinding for "Show SCM".
+
 ### 1.0.1
 
 Added a new command that inserts a generated GUID at the cursor location in the active text editor and rebound the default keybinding to it (since this command is basically Lorelai, and the old one is more or less Kirk).

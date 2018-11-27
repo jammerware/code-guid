@@ -20,7 +20,10 @@ I'm using [copy-paste](https://github.com/xavi-/node-copy-paste) to deliver clip
 
 ## Release Notes
 
-### 1.2.2
+### 1.2.4
+Updated README.
+
+### 1.2.3
 
 Updated my package-lock to remove references to event-stream and flatmap-stream due to the large kerfuffle going on [here](https://github.com/dominictarr/event-stream/issues/116). I'm not using these dependencies anyway - I think they were created by an old version of the VS Code Extension Yeoman generator. Also did general code cleanup and updated some configuration files to the modern age of VS Code.
 

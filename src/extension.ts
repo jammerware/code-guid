@@ -1,39 +1,34 @@
 'use strict';
-
+import * as ncp from 'copy-paste';
 import * as vscode from 'vscode';
-import { 
-    Position,
-    TextEdit,
+import {
     TextEditor,
     TextEditorEdit,
-    Uri
 } from 'vscode';
 import { Guid } from './models/guid';
 
-let ncp = require('copy-paste');
-
 export function activate(context: vscode.ExtensionContext) {
-    let generateGuidToClipboardSub = vscode.commands.registerCommand('codeGuid.generateGuidToClipboard', () => {
-        let guid = Guid.newGuid();
+    const generateGuidToClipboardSub = vscode.commands.registerCommand('codeGuid.generateGuidToClipboard', () => {
+        const guid = Guid.newGuid();
         ncp.copy(guid);
 
         // get configuration
-        let config = vscode.workspace.getConfiguration('codeGuid'); 
+        const config = vscode.workspace.getConfiguration('codeGuid');
 
-        if(config.get('showNotificationWhenGuidGenerated')) {
+        if (config.get('showNotificationWhenGuidGenerated')) {
             vscode.window.showInformationMessage(`Copied GUID "${guid}" to your clipboard!`);
         }
     });
 
-    let generateGuidToCursorSub = vscode.commands.registerTextEditorCommand('codeGuid.insertGuidAtCursor', (textEditor: TextEditor, edit: TextEditorEdit) => {
-        edit.insert(textEditor.selection.active, Guid.newGuid())
+    const generateGuidToCursorSub = vscode.commands.registerTextEditorCommand('codeGuid.insertGuidAtCursor', (textEditor: TextEditor, edit: TextEditorEdit) => {
+        edit.insert(textEditor.selection.active, Guid.newGuid());
     });
 
     context.subscriptions.push(
-        generateGuidToClipboardSub, 
-        generateGuidToCursorSub
+        generateGuidToClipboardSub,
+        generateGuidToCursorSub,
     );
 }
 
-export function deactivate() {
-}
+// tslint:ignore no-empty
+export function deactivate() { /* no-op */ }

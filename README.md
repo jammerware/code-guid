@@ -20,6 +20,14 @@ I'm using [copy-paste](https://github.com/xavi-/node-copy-paste) to deliver clip
 
 ## Release Notes
 
+### 1.3.1
+
+Update README.
+
+### 1.3.0
+
+Dependency updates to resolve potential vulnerabilities.
+
 ### 1.2.4
 Updated README.
 
